@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 09-05-2019 a las 11:13:37
+-- Tiempo de generación: 09-09-2019 a las 20:23:29
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `toreros_folcroricas`
+-- Base de datos: `toreros_folcloricas`
 --
 
 -- --------------------------------------------------------
@@ -30,22 +30,19 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `casamientos_tf`;
 CREATE TABLE IF NOT EXISTS `casamientos_tf` (
-  `Codigo` int(11) NOT NULL AUTO_INCREMENT,
-  `Nombre_Torero` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `Apellidos_Torero` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Nombre_Folcrorica` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `Apellido_Folcrorica` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`Codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabla sacada de: http://es.dbpedia.org/';
+  `Codigo_torero` int(11) NOT NULL,
+  `Codigo_folcloricas` int(11) NOT NULL,
+  PRIMARY KEY (`Codigo_torero`,`Codigo_folcloricas`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabla sacada de: http://es.dbpedia.org/';
 
 --
 -- Volcado de datos para la tabla `casamientos_tf`
 --
 
-INSERT INTO `casamientos_tf` (`Codigo`, `Nombre_Torero`, `Apellidos_Torero`, `Nombre_Folcrorica`, `Apellido_Folcrorica`) VALUES
-(1, 'José', 'Ortega Cano', 'Rocío', 'Jurado'),
-(2, 'Curro', 'Romero', 'Concha', 'Piquer'),
-(3, 'Francisco', 'Rivera Pérez', 'Isabel', 'Pantoja');
+INSERT INTO `casamientos_tf` (`Codigo_torero`, `Codigo_folcloricas`) VALUES
+(4, 1),
+(9, 2),
+(11, 12);
 
 -- --------------------------------------------------------
 
@@ -95,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `toreros` (
   `Nombre` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `Apellidos` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   UNIQUE KEY `ID` (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `toreros`
@@ -111,7 +108,8 @@ INSERT INTO `toreros` (`ID`, `Nombre`, `Apellidos`) VALUES
 (7, 'José', 'Tomás'),
 (8, 'Juan José', 'Padilla'),
 (9, 'José', 'Ortega Cano'),
-(10, 'Francisco', 'Rivera Ordóñez');
+(10, 'Francisco', 'Rivera Ordóñez'),
+(11, 'Curro', 'Romero');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
