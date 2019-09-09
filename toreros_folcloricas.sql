@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
@@ -23,29 +23,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `casamientos_tf`
---
-
-DROP TABLE IF EXISTS `casamientos_tf`;
-CREATE TABLE IF NOT EXISTS `casamientos_tf` (
-  `Codigo_torero` int(11) NOT NULL,
-  `Codigo_folcloricas` int(11) NOT NULL,
-  PRIMARY KEY (`Codigo_torero`,`Codigo_folcloricas`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabla sacada de: http://es.dbpedia.org/';
-
---
--- Volcado de datos para la tabla `casamientos_tf`
---
-
-INSERT INTO `casamientos_tf` (`Codigo_torero`, `Codigo_folcloricas`) VALUES
-(4, 1),
-(9, 2),
-(11, 12);
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `folcloricas`
 --
@@ -110,7 +87,29 @@ INSERT INTO `toreros` (`ID`, `Nombre`, `Apellidos`) VALUES
 (9, 'José', 'Ortega Cano'),
 (10, 'Francisco', 'Rivera Ordóñez'),
 (11, 'Curro', 'Romero');
+
+--
+-- Estructura de tabla para la tabla `casamientos_tf`
+--
+
+DROP TABLE IF EXISTS `casamientos_tf`;
+CREATE TABLE IF NOT EXISTS `casamientos_tf` (
+  `Codigo_torero` int(11) NOT NULL,
+  `Codigo_folcloricas` int(11) NOT NULL,
+  PRIMARY KEY (`Codigo_torero`,`Codigo_folcloricas`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabla sacada de: http://es.dbpedia.org/';
+
+--
+-- Volcado de datos para la tabla `casamientos_tf`
+--
+
+INSERT INTO `casamientos_tf` (`Codigo_torero`, `Codigo_folcloricas`) VALUES
+(4, 1),
+(9, 2),
+(11, 12);
 COMMIT;
+-- --------------------------------------------------------
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
