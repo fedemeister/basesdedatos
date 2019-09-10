@@ -27,15 +27,15 @@ INSERT INTO `folcloricas` (`Codigo_folclorica`, `Nombre`, `Apellidos`, `Fecha de
 (2, 'Rocío', 'Jurado', '1946-09-18', '2006-06-01'),
 (3, 'Lola', 'Flores', '1923-01-21', '1995-05-16'),
 (4, 'Marifé de Triana', NULL, '1936-09-13', '2013-02-16'),
-(7, 'Gracia Montes', NULL, '1933-03-01', NULL),
-(8, 'Juanita Reina', NULL, '1925-08-25', '1999-03-19'),
-(9, 'María', 'Jiménez', '1950-02-03', NULL),
-(10, 'María del Monte', NULL, '1962-04-26', NULL),
-(11, 'Carmen Sevilla', NULL, '1930-10-16', NULL),
-(12, 'Concha', 'Piquer', '1906-12-13', '1990-12-12'),
-(13, 'Estrellita', 'Castro', '1908-06-26', '1983-07-10'),
-(14, 'Paquita', 'Rico', '1929-10-13', '2017-07-09'),
-(15, 'Marujita Díaz', NULL, '1932-04-27', '2015-06-23');
+(5, 'Gracia Montes', NULL, '1933-03-01', NULL),
+(6, 'Juanita Reina', NULL, '1925-08-25', '1999-03-19'),
+(7, 'María', 'Jiménez', '1950-02-03', NULL),
+(8, 'María del Monte', NULL, '1962-04-26', NULL),
+(9, 'Carmen Sevilla', NULL, '1930-10-16', NULL),
+(10, 'Concha', 'Piquer', '1906-12-13', '1990-12-12'),
+(11, 'Estrellita', 'Castro', '1908-06-26', '1983-07-10'),
+(12, 'Paquita', 'Rico', '1929-10-13', '2017-07-09'),
+(13, 'Marujita Díaz', NULL, '1932-04-27', '2015-06-23');
 
 -- --------------------------------------------------------
 
