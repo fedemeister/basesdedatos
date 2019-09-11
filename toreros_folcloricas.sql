@@ -93,6 +93,6 @@ CREATE TABLE IF NOT EXISTS `casamientos_tf` (
 INSERT INTO `casamientos_tf` (`Codigo_torero`, `Codigo_folclorica`) VALUES
 (4, 1),
 (9, 2),
-(11, 12);
+(11, 10);
 COMMIT;
 
